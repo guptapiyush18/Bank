@@ -1,0 +1,14 @@
+form{
+    background-color: rgba(224, 224, 224, 0.253);
+    width: 480px;
+    margin: auto;
+    margin-top: 50px;
+    font-family: 'Exo';
+    border-radius:12px
+}
+p{
+    font-family: 'Exo';
+}
+select{
+    width:15%
+}

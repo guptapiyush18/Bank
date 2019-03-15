@@ -1,0 +1,41 @@
+
+  <div align="center">
+    <br>
+    <br>
+    <br>
+    
+          <p class="h1 mb-4">Type Of Deposit:</p>
+          <select  (change)=ch(op.value) class="form-control form-control-lg" #op>
+          <option value=1 disabled>Choose</option>
+          <option value=1>Fixed Deposit</option>
+          <option value=2>Reccuring Deposit</option>
+          
+          </select>
+          
+          
+          <form class="text-center border border-light p-5">
+              
+              <p class="h4 mb-4">{{head}}</p>
+          
+              <!-- Name -->
+              <input type="number" id="defaultContactFormName" class="form-control mb-4" placeholder="Principal Amount" #amount required>
+          
+              <!-- Email -->
+              <input type="number" id="defaultContactFormEmail" class="form-control mb-4" placeholder="Tenure(Months)" #year required>
+          
+              <input type="number" id="defaultContactFormName" class="form-control mb-4" placeholder="Rate Of Interest"  #roi >
+          
+              <!-- Copy -->
+              <div class="custom-control custom-checkbox mb-4">
+                  <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
+                  
+              </div>
+          
+              <!-- Send button -->
+              <button class="btn btn-info btn-block" type="submit" (click)="cal(amount.value,year.value,roi.value)">Calculate FD</button>
+              <button class="btn btn-info btn-block" type="reset">Reset</button>
+              <h2 style="font-family: 'Exo';">Result : {{res}}</h2>
+          </form>
+    
+          </div>
+    

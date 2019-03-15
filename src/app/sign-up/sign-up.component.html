@@ -1,0 +1,59 @@
+<div class="simple-login-container" >
+    <h2>SignUp Form</h2>
+    <form class="container" [formGroup]="form" >
+            <div class="row">
+                    <div class="col-md-12 form-group">
+                        <input type="text" class="form-control" placeholder="Enter UserName" #id formControlName="username">
+                        
+                    </div>
+                </div>     
+     <div class="row">
+        <div class="col-md-12 form-group">  
+            <input type="text" class="form-control" placeholder="Enter Full Name"  #name formControlName="name">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 form-group">
+            <input type="email" class="form-control" placeholder="Enter E-mail"  #dob formControlName="date">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 form-group">
+            <input type="text" class="form-control" placeholder="Enter IFSC Code"  #ifsc formControlName="ifs">
+            
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-md-12 form-group">
+                    <input type="number" class="form-control" placeholder="Enter Account Number" #acc_number formControlName="acc">
+            </div>
+        </div>
+    <div class="row">
+            <div class="col-md-12 form-group">
+                <input type="number" class="form-control" placeholder="Enter Mobile Number"  #mob formControlName="mob">
+            </div>
+        </div>
+        
+    <div class="row">
+        <div class="col-md-12 form-group">
+            <input type="password" placeholder="Enter your Password" class="form-control"  #pass formControlName="pass">
+        </div>
+    </div>
+    <div class="row">   
+            <div class="col-md-12 form-group">
+                <input type="password" placeholder="Re-Enter your Password" class="form-control" formControlName="repass">
+            </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12 form-group ">  
+            <button type="submit" class="btn btn-block btn-login" [disabled]="!form.valid" (click)='addItem(id.value,name.value,dob.value,ifsc.value,acc_number.value,mob.value,pass.value)' >Register</button>
+        </div>
+        <div class="col-md-12 form-group " *ngIf="flag">  
+            <a role="button" class="btn btn-block btn-login" routerLink=""  >Go Back to Login</a>
+        </div>
+    </div>
+</form>
+<div class="flagg" *ngIf="flag">User Created Successfully</div>
+<div class="flagg" *ngIf="nflag">User id already exists</div>
+</div>
+<router-outlet></router-outlet>

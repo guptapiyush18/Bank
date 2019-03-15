@@ -1,0 +1,33 @@
+   
+        
+    <div class="simple-login-container" *ngIf="app">
+            
+            <form  [formGroup]="Form">
+            <h2>Login Form</h2>
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <input type="text" class="form-control" placeholder="Username"  formControlName="user" #user (change)="senduser(user.value)">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <input type="password" placeholder="Enter your Password" class="form-control" formControlName="pass" #pass (change)="getpass(pass.value)">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <input type="submit" class="btn btn-block btn-login" [disabled]="!Form.valid" (click)="navigateMenu()">
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-md-12 form-group">
+                        <a routerLink="signup" role="button"  class="btn btn-block btn-login" (click)="navigate()">Register</a>
+                        
+                    </div>
+                </div>
+            </form>
+        
+        </div>
+    
+    <router-outlet ></router-outlet> 
+   

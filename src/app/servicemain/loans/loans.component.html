@@ -1,0 +1,41 @@
+
+  <div align="center">
+<br>
+<br>
+<br>
+
+      <p class="h1 mb-4">Type Of Loan:</p>
+      <select  (change)=ch(op.value) class="form-control form-control-lg" #op>
+      <option value=1 disabled>Choose</option>
+      <option value=1>Home Loan</option>
+      <option value=2>Personal Loan</option>
+      <option value=3>Car Loan</option>
+      <option value=4>Educational Loan</option>
+      </select>
+      
+      
+      <form class="text-center border border-light p-5">
+          
+          <p class="h4 mb-4">{{head}}</p>
+      
+          <!-- Name -->
+          <input type="number" id="defaultContactFormName" class="form-control mb-4" placeholder="Principal Amount" #amount required>
+      
+          <!-- Email -->
+          <input type="number" id="defaultContactFormEmail" class="form-control mb-4" placeholder="Tenure(Months)" #year required>
+      
+          <input type="number" id="defaultContactFormName" class="form-control mb-4" placeholder="Rate Of Interest" value={{roi}} #rr disabled=true>
+      
+          <!-- Copy -->
+          <div class="custom-control custom-checkbox mb-4">
+              <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
+              
+          </div>
+      
+          <!-- Send button -->
+          <button class="btn btn-info btn-block" type="submit" (click)="cal(amount.value,year.value,rr.value)">Calculate</button>
+          <button class="btn btn-info btn-block" type="reset">Reset</button>
+          <h2 style="font-family: 'Exo';">EMI : {{res}}</h2>
+      </form>
+
+      </div>

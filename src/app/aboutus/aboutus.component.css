@@ -1,0 +1,87 @@
+.breadcrumb-image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 104px 0 110px;
+    position: relative;
+    width:100%;
+}
+.breadcrumb-image::before {
+    background: rgba(0, 0, 0, 0.80) none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+   z-index: 0;
+}
+.breadcrumb-image h1 {
+    color: #ffffff;
+    font-size: 33px;
+    font-weight: 600;
+    line-height: 40px;
+    position: relative;
+    text-transform: uppercase;
+}
+.breadcrumbs_path {
+    color: #fff;
+    margin-top: 8px;
+    position: relative;
+    z-index: 9;
+}
+.breadcrumbs_path > a {
+    color: #fff;
+    transition: all 0.3s ease 0s;
+}
+.breadcrumb-image p {
+    color: #ffffff;
+    position: relative;
+    text-transform: uppercase;
+}
+h4{ 
+   margin-left: 20%; 
+   margin-right: 20%; 
+   align-content: center; 
+   font-family: Arial, Helvetica, sans-serif;
+   margin-top: 3%;
+   font-size: 20px
+}
+
+.card {
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: 50px auto auto auto;
+    text-align: center;
+    height: 300px;
+  }
+  
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+  
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+  
+  button:hover, a:hover {
+    opacity: 0.7;
+  }
+  

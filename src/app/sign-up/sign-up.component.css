@@ -1,0 +1,30 @@
+body{
+    background-color:#5286F3;
+    font-size:14px;
+    color:#fff;
+    
+    
+}
+.simple-login-container{
+    width:300px;
+    max-width:100%;
+    margin-left: 800px;
+    margin-top: 200px
+}
+.simple-login-container h2{
+    text-align:center;
+    font-size:20px;
+}
+
+.simple-login-container .btn-login{
+    background-color:#FF5964;
+    color:#fff;
+}
+a{
+    color:#fff;
+}
+.flagg
+{
+    font-family: cursive;
+    text-align: center
+}
