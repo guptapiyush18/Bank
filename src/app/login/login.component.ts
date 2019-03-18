@@ -18,12 +18,15 @@ ff:boolean=false;
   constructor(private router :Router,private restService:RestService,private useraut :UserAuthService ) { }
   Form;
   user:User={id:"",Name:"",Email:"",IFSC:"",AccountNumber:"",MobileNumber:"",Password:""}
+  
 
+ 
  senduser(id)
  {
    
   this.restService.getUser(id).subscribe(
     (response:any) =>{
+      
       this.user=response.json()
       
     } )
@@ -34,6 +37,7 @@ ff:boolean=false;
      
       if(pass===this.user.Password)
         {
+          
           this.useraut.setUserLoggedIn();
           this.ff=true;
         }

@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/rx';
   providedIn: 'root'
 })
 export class RestService {
-
+  idss;
 Url="http://localhost:3000/UserInfo/"
   constructor(private http:Http) { }
 
@@ -20,6 +20,7 @@ addUser(users)
 
 getUser(id)
   {
+   this.idss=id 
     return this.http.get(this.Url+id)
     .map((response:any)=>response)
     

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginComponent } from '../login/login.component';
 import { RestService } from '../Services/rest.service';
+import { User } from '../User';
 
 
 @Component({
@@ -11,10 +12,21 @@ import { RestService } from '../Services/rest.service';
 export class MyproComponent implements OnInit {
 
   constructor(private rest:RestService) { }
-id:string="asd"
- 
+idss=this.rest.idss
+
+userr:User={id:"",Name:"",Email:"",IFSC:"",AccountNumber:"",MobileNumber:"",Password:""}
+
   ngOnInit() {
+    this.rest.getUser(this.idss).subscribe(
+      (response:any) =>{
+        
+        this.userr=response.json()
+        
+      } )
   } 
-
-
+ 
+    
+   
+     
+  
 }
