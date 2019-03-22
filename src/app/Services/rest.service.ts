@@ -18,7 +18,7 @@ addUser(users)
   .map((response:any)=>response.json())
 }
 
-getUser(id)
+getUser(id):Observable<any>
   {
    this.idss=id 
     return this.http.get(this.Url+id)
